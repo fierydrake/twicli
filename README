@@ -1,0 +1,22 @@
+Twicli is a very simple user twitter home page monitor for the command line.
+
+It expects a simple text file called "credentials" in the current working
+directory on startup.  This file should contain 2 lines, the first containing
+your twitter userid and the second your password.
+
+Run Twicli as follows:
+  ruby twicli.rb
+
+It should display a current time divider any time it sees new tweets, and
+it will print those tweets out each with their own timestamp (in localtime)
+and username.  It tries to align usernames and tweet text for easy reading.
+
+Every time it checks for new tweets (default is 60 seconds, you can change
+this in the source easily) and none are found, it prints the current time
+(which will be overwritten in the next update so as not to leave lots of
+meaningless timestamps all over your terminal). 
+
+Required gems:
+  xml-simple
+
+That's about it.
